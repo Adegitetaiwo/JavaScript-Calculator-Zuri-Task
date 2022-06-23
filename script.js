@@ -20,6 +20,7 @@ let divide = (num1, num2) => {
 // calculator body
 
 num1 = parseFloat(prompt("Enter the first number"));
+
 operation = prompt("Enter operation type: +, -, * or /");
 num2 = parseFloat(prompt("Enter the Second number"));
 
@@ -45,4 +46,6 @@ if (operation == "+") {
 }
 
 // print result to console
+console.log(`${num1} ${operation} ${num2}`)
+console.log(`Result: ${result}`)
 alert(`${num1} ${operation} ${num2} \n Result: ${result}`);
