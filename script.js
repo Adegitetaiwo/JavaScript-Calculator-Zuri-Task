@@ -1,5 +1,5 @@
 
-
+console.log("Arithmetic Calculator")
 // 
 let add = (num1, num2) => {
     return num1 + num2
@@ -18,26 +18,31 @@ let divide = (num1, num2) => {
 }
 
 // calculator body
-let calculator = (num1, num2, operation) => {
 
-    // check for operation type
-    // add
-    if (operation == "add") {
-        result = add(num1, num2)
+num1 = parseFloat(prompt("Enter the first number"));
+operation = prompt("Enter operation type: +, -, * or /");
+num2 = parseFloat(prompt("Enter the Second number"));
 
-        // subtract
-    } else if (operation == "subtract") {
-        result = subtract(num1, num2)
 
-        // multiple
-    } else if (operation == "multiply") {
-        result = multiply(num1, num2)
+let result;
 
-        // divide
-    } else if (operation == "divide") {
-        result = divide(num1, num2)
-    }
+// check for operation type
+// add
+if (operation == "+") {
+    result = add(num1, num2)
 
-    // print result to console
-    console.log(result)
+    // subtract
+} else if (operation == "-") {
+    result = subtract(num1, num2)
+
+    // multiple
+} else if (operation == "*") {
+    result = multiply(num1, num2)
+
+    // divide
+} else if (operation == "/") {
+    result = divide(num1, num2)
 }
+
+// print result to console
+alert(`${num1} ${operation} ${num2} \n Result: ${result}`);
